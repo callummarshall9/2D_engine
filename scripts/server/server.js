@@ -23,7 +23,7 @@ function broadcast() {
 
 function logClient(connection) {
     var date = new Date();
-    console.log(date + "-" + connection.remoteAddresses + " connected");
+    console.log(date + "-" + connection.remoteAddresses + " connected to server");
 }
 
 function handleRequest(request) {
