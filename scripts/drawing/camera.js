@@ -19,5 +19,12 @@ function drawPlayers() {//A function to draw all of the players.
         }
         drawingContext.fillStyle = players[i].color;//Set the colour of what to draw to the player's colour.
         drawingContext.fillRect(cameraXCoord, cameraYCoord, players[i].width, players[i].height);//Draw the player at the X and Y coordinate.
+        drawingContext.fillStyle = "red";//Set the colour of what to draw to red.
+        drawingContext.fillRect(cameraXCoord - 15, cameraYCoord - 10, 50, 5);//Draw a red health bar representing the player's health.
+        drawingContext.fillStyle = "green";//Set the colour of what to draw to green.
+        drawingContext.fillRect(cameraXCoord - 15, cameraYCoord - 10, (50 / currentPlayer.maxHealth) * currentPlayer.health, 5);//Draw a green health bar representing the percentage of the health.
+        drawingContext.font = "10px Arial";//Set the font of what to draw.
+        drawingContext.fillStyle = "white";//Set the colour of what to draw.
+        drawingContext.fillText(players[i].name, cameraXCoord - 15, cameraYCoord - 15);//Draw the player's name above their head.
     }
 }
