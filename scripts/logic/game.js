@@ -9,11 +9,12 @@ function getCoordinatesOfClick(event) {//A function to get coordinates on the ca
     currentPlayer.angle = findAngleBetweenTwoPoints(x, y);//Set the angle of where the current player is facing to the angle between the click and the player coordinate.
 }
 
-function logicLoop() {//A logic loop to do the logic of the game.
+function gameLoop() {//A logic loop to do the logic of the game.
     "use strict";
-    if (connected) {//If the client is connected to the web socket server.
-        updatePlayerInformation();//Update the player object information on the server.
-    }
+    drawingContext.fillStyle = "black";//Set the colour of what to draw to black.
+    drawingContext.fillRect(0, 0, 800, 400);//Fill the canvas with black.
+    drawPlayers();//Draw all of the players.
+    drawGUI();//Draw the GUI.
     updateCompass();//Update the compass.
     if (currentPlayer.aiControlled && (compassPoint.x === 0 && compassPoint.y === 0) === false) {//If the current player is AI controlled and they have an objective.
         currentPlayer.angle = findAngleBetweenTwoPoints(compassPoint.x, compassPoint.y);//Set the current player's angle towards the compass.
@@ -46,8 +47,7 @@ function main() {
     canvas = document.getElementById("gameView");
     drawingContext = canvas.getContext("2d");
     players.push(currentPlayer);
-    setInterval(drawLoop, 16);
-    setInterval(logicLoop, 32);
+    setInterval(gameLoop, 32);
     setInterval(updatePlayerInformation, 32);
     document.addEventListener("keydown", keyDownHandler);
     canvas.addEventListener("mousedown", getCoordinatesOfClick);
