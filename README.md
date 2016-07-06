@@ -1,5 +1,7 @@
 # 2D_engine
-2D engine made in JavaScript
+
+2D engine made in JavaScript designed for use with the HTML5 canvas as a template for potential games or other tasks.
+It has support for multiplayer using Node.JS and the Web Sockets standard.
 
 #  Hobby project
 
