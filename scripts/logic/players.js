@@ -16,8 +16,8 @@ var players = [],
         color: "blue"
     };
 
-function movePlayer() {
+function movePlayer() {//A function to move the player.
     "use strict";
-    currentPlayer.x = currentPlayer.x + (currentPlayer.stepSize * Math.cos(currentPlayer.angle));
-    currentPlayer.y = currentPlayer.y + (currentPlayer.stepSize * Math.sin(currentPlayer.angle));
+    currentPlayer.x = currentPlayer.x + (currentPlayer.stepSize * Math.cos(currentPlayer.angle));//Add the horizontal component of the speed to the player's X coordinate.
+    currentPlayer.y = currentPlayer.y + (currentPlayer.stepSize * Math.sin(currentPlayer.angle));//Add the vertical component of the speed to the player's Y coordinate.
 }
