@@ -17,7 +17,7 @@ function updateCompass() {//A function designed to update the compass.
     "use strict";
     var distance = 0;//A variable to hold the distance to a point.
     if ((compassPoint.x === 0 && compassPoint.y === 0) === false) {//If the compass point isn't set at origin.
-        distance = Math.floor(Math.sqrt(Math.pow(currentPlayer.x - compassPoint.x, 2) + Math.pow(currentPlayer.y - compassPoint.y, 2)));//Use the distance formula to calculate distance to the point.
+        compassPoint.distance = Math.floor(Math.sqrt(Math.pow(currentPlayer.x - compassPoint.x, 2) + Math.pow(currentPlayer.y - compassPoint.y, 2)));//Use the distance formula to calculate distance to the point.
         if (distance <= currentPlayer.stepSize) {//If the distance is less then the player's step size.
             compassPoint.x = 0;//Set the compass point to origin so the compass objective no longer shows on the player's compass.
             compassPoint.y = 0;
