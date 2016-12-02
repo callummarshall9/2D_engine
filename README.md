@@ -5,4 +5,4 @@ It has support for multiplayer using Node.JS and the Web Sockets standard.
 
 # Hobby Project
 
-Project is done for purely fun.
+Project is done for purely fun. Currently the project isn't being worked on due to work being done. Contributors welcome!
